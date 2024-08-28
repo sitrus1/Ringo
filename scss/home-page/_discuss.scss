@@ -1,0 +1,142 @@
+.discuss{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: $green;
+}
+.discuss__content{
+    padding: 0 10px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+.discuss__title{
+    width: 80%;
+    margin-bottom: 20px;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33.6px;
+}
+.discuss__text{
+    width: 85%;
+    margin-bottom: 40px;
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23.2px;
+    opacity: 80%;
+}
+// .discuss__form{
+// }
+.discuss__input{
+    width: 100%;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23.2px;
+    border: none;
+    border-bottom: 2px solid #ffffff33;
+    background-color: transparent;
+    outline: none;
+}
+.discuss__input::placeholder{
+    color: #ffffff80;
+}
+.discuss__file{
+    display: none;
+}
+.discuss__file-wrp{
+    margin-bottom: 40px;
+    padding: 3px 0;
+    padding-left: 28px;
+    color: #ffffff80;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url('../../img/discuss-document.png');
+}
+.discuss__submit-btn{
+    @include button;
+    width: 100%;
+    margin-bottom: 25px;
+    border: none;
+}
+.discuss__checkbox{
+    display: none;
+}
+.discuss__checkbox-wrp{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.discuss__checkbox__cube{
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $white;
+}
+.discuss__checkbox__cube-yes{
+    width: 10px;
+    height: 10px;
+    border: 2px solid $green;
+    background-color: $green;
+    transition: all .2s linear;
+}
+.discuss__checkbox:checked + .discuss__checkbox-wrp .discuss__checkbox__cube .discuss__checkbox__cube-yes{
+    background-color: $white;
+} 
+.discuss__checkbox-text{
+    color: $white;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15.6px;
+}
+.discuss__img-wrp{
+    width: 100%;
+    height: 100%;
+}
+.discuss__img{
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 640px) {
+    .discuss{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .discuss__content{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .discuss__title{
+        width: 100%;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 45px;
+    }
+    .discuss__text{
+        width: 100%;
+    }
+    .discuss__checkbox-text{
+        width: 154px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .discuss__content{
+        width: 500px;
+        padding-right: 180px;
+        margin-left: auto;
+    }
+    .discuss__checkbox-text{
+        width: 100%;
+    }
+}
